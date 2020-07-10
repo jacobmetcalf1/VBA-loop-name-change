@@ -1,0 +1,17 @@
+Sub nameprepare()
+For Each x In Range("A1:AO1")
+        x.Value = Trim(x.Value)
+        x.Value = StrConv(x.Value, vbLowerCase)
+        x.Value = Replace(x.Value, " ", "_")
+        x.Value = Replace(x.Value, "/", "__")
+        x.Value = Replace(x.Value, "#", "num")
+    Next
+End Sub
+Sub namereturn()
+For Each x In Range("A1:AO1")
+        x.Value = Replace(x.Value, "_", " ")
+        x.Value = Replace(x.Value, "num", "#")
+        x.Value = Replace(x.Value, "__", "/")
+        x.Value = StrConv(x.Value, vbProperCase)
+    Next
+End Sub
