@@ -15,3 +15,27 @@ For Each x In Range("A1:AO1")
         x.Value = StrConv(x.Value, vbProperCase)
     Next
 End Sub
+
+Sub claimsAnalystPrep()
+    Dim x As Integer
+    Application.ScreenUpdating = False
+    NumRows = Range("AG2", Range("AG2").End(xlDown)).Rows.Count
+    Range("AG2").Select
+    For x = 1 To NumRows
+        If ActiveCell.Value = "Inactive" Then
+            ActiveCell.Value = 1
+        ElseIf ActiveCell.Value = "Butler" Then
+            ActiveCell.Value = 2
+        ElseIf ActiveCell.Value = "Holly Smithson" Then
+            ActiveCell.Value = 3
+        ElseIf ActiveCell.Value = "Maria Contreras" Then
+            ActiveCell.Value = 4
+        ElseIf ActiveCell.Value = "William Lambert" Then
+            ActiveCell.Value = 5
+        Else
+            ActiveCell.Value = 6
+        End If
+        ActiveCell.Offset(1, 0).Select
+    Next
+    Application.ScreenUpdating = True
+End Sub
