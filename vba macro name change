@@ -3,7 +3,7 @@ For Each x In Range("A1:BA1")
         If x.Value = "Attorney ** (WT = Walkthrough)" Then
             x.Value = "attorney_walkthrough"
         ElseIf x.Value = "CT/Blind App" Then
-            x.Value = ct_blind_app
+            x.Value = "ct_blind_app"
         End If
         x.Value = Trim(x.Value)
         x.Value = StrConv(x.Value, vbLowerCase)
@@ -14,10 +14,14 @@ For Each x In Range("A1:BA1")
 End Sub
 
 Sub namereturn()
-For Each x In Range("A1:AO1")
+For Each x In Range("A1:BA1")
+        If x.Value = "attorney_walkthrough" Then
+            x.Value = "Attorney ** (WT = Walkthrough)"
+        ElseIf x.Value = "ct_blind_app" Then
+            x.Value = "CT/Blind App"
+        End If
         x.Value = Replace(x.Value, "_", " ")
         x.Value = Replace(x.Value, "num", "#")
-        x.Value = Replace(x.Value, "__", "/")
         x.Value = StrConv(x.Value, vbProperCase)
     Next
 End Sub
