@@ -24,13 +24,13 @@ Sub claimsAnalystPrep()
     For x = 1 To NumRows
         If ActiveCell.Value = "Inactive" Then
             ActiveCell.Value = 1
-        ElseIf ActiveCell.Value = "Butler" Then
+        ElseIf ActiveCell.Value = "Name1" Then
             ActiveCell.Value = 2
-        ElseIf ActiveCell.Value = "Holly Smithson" Then
+        ElseIf ActiveCell.Value = "Name2" Then
             ActiveCell.Value = 3
-        ElseIf ActiveCell.Value = "Maria Contreras" Then
+        ElseIf ActiveCell.Value = "Name3" Then
             ActiveCell.Value = 4
-        ElseIf ActiveCell.Value = "William Lambert" Then
+        ElseIf ActiveCell.Value = "Name4" Then
             ActiveCell.Value = 5
         Else
             ActiveCell.Value = 6
