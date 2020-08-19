@@ -35,16 +35,22 @@ Sub claimsAnalystPrep()
     For x = 1 To NumRows
         If ActiveCell.Value = "Inactive" Then
             ActiveCell.Value = 1
-        ElseIf ActiveCell.Value = "Butler" Then
+	ElseIf ActiveCell.Value = "#N/A" Then
             ActiveCell.Value = 2
-        ElseIf ActiveCell.Value = "Holly Smithson" Then
+	ElseIf ActiveCell.Value = "Unassigned" Then
             ActiveCell.Value = 3
-        ElseIf ActiveCell.Value = "Maria Contreras" Then
+	ElseIf ActiveCell.Value = "Butler" Then
             ActiveCell.Value = 4
-        ElseIf ActiveCell.Value = "William Lambert" Then
+        ElseIf ActiveCell.Value = "Holly Smithson" Then
             ActiveCell.Value = 5
-        Else
+        ElseIf ActiveCell.Value = "Maria Contreras" Then
             ActiveCell.Value = 6
+        ElseIf ActiveCell.Value = "William Lambert" Then
+            ActiveCell.Value = 7
+	ElseIf ActiveCell.Value = "Minerva Castro" Then
+            ActiveCell.Value = 8
+        Else
+            ActiveCell.Value = 3
         End If
         ActiveCell.Offset(1, 0).Select
     Next
