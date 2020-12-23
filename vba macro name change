@@ -34,23 +34,23 @@ Sub claimsAnalystPrep()
     Range("AH2").Select
     For x = 1 To NumRows
         If ActiveCell.Value = "Inactive" Then
-            ActiveCell.Value = 1
-	ElseIf ActiveCell.Value = "#N/A" Then
             ActiveCell.Value = 2
-	ElseIf ActiveCell.Value = "Unassigned" Then
+    ElseIf ActiveCell.Value = "#N/A" Then
             ActiveCell.Value = 3
-	ElseIf ActiveCell.Value = "Butler" Then
+    ElseIf ActiveCell.Value = "Unassigned" Then
             ActiveCell.Value = 4
-        ElseIf ActiveCell.Value = "Holly Smithson" Then
+    ElseIf ActiveCell.Value = "Butler" Then
             ActiveCell.Value = 5
-        ElseIf ActiveCell.Value = "Maria Contreras" Then
+        ElseIf ActiveCell.Value = "Holly Smithson" Then
             ActiveCell.Value = 6
-        ElseIf ActiveCell.Value = "William Lambert" Then
+        ElseIf ActiveCell.Value = "Maria Contreras" Then
             ActiveCell.Value = 7
-	ElseIf ActiveCell.Value = "Minerva Castro" Then
+        ElseIf ActiveCell.Value = "William Lambert" Then
             ActiveCell.Value = 8
-	ElseIf ActiveCell.Value = "Chris Sorensen" Then
+    ElseIf ActiveCell.Value = "Minerva Castro" Then
             ActiveCell.Value = 9
+    ElseIf ActiveCell.Value = "Chris Sorensen" Then
+            ActiveCell.Value = 10
         Else
             ActiveCell.Value = 3
         End If
