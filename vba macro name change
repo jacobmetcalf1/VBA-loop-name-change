@@ -49,6 +49,8 @@ Sub claimsAnalystPrep()
             ActiveCell.Value = 7
 	ElseIf ActiveCell.Value = "Minerva Castro" Then
             ActiveCell.Value = 8
+	ElseIf ActiveCell.Value = "Chris Sorensen" Then
+            ActiveCell.Value = 9
         Else
             ActiveCell.Value = 3
         End If
