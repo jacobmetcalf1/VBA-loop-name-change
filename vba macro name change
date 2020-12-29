@@ -1,8 +1,6 @@
 Sub nameprepare()
 For Each x In Range("A1:BA1")
-        If x.Value = "Attorney ** (WT = Walkthrough)" Then
-            x.Value = "attorney_walkthrough"
-        ElseIf x.Value = "CT/Blind App" Then
+        If x.Value = "CT/Blind App" Then
             x.Value = "ct_blind_app"
         End If
         x.Value = Trim(x.Value)
@@ -19,9 +17,7 @@ For Each x In Range("A1:BA1")
         x.Value = Replace(x.Value, "number", "#")
         x.Value = Replace(x.Value, "num", "#")
         x.Value = StrConv(x.Value, vbProperCase)
-        If x.Value = "Attorney Walkthrough" Then
-            x.Value = "Attorney ** (WT = Walkthrough)"
-        ElseIf x.Value = "Ct Blind App" Then
+        If x.Value = "Ct Blind App" Then
             x.Value = "CT/Blind App"
         End If
     Next
