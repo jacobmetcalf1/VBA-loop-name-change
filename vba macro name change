@@ -31,11 +31,11 @@ Sub claimsAnalystPrep()
     For x = 1 To NumRows
         If ActiveCell.Value = "Inactive" Then
             ActiveCell.Value = 2
-    ElseIf ActiveCell.Value = "#N/A" Then
+        ElseIf ActiveCell.Value = "#N/A" Then
             ActiveCell.Value = 3
-    ElseIf ActiveCell.Value = "Unassigned" Then
+        ElseIf ActiveCell.Value = "Unassigned" Then
             ActiveCell.Value = 4
-    ElseIf ActiveCell.Value = "Butler" Then
+        ElseIf ActiveCell.Value = "Butler" Then
             ActiveCell.Value = 5
         ElseIf ActiveCell.Value = "Holly Smithson" Then
             ActiveCell.Value = 6
@@ -43,12 +43,26 @@ Sub claimsAnalystPrep()
             ActiveCell.Value = 7
         ElseIf ActiveCell.Value = "William Lambert" Then
             ActiveCell.Value = 8
-    ElseIf ActiveCell.Value = "Minerva Castro" Then
+        ElseIf ActiveCell.Value = "Minerva Castro" Then
             ActiveCell.Value = 9
-    ElseIf ActiveCell.Value = "Chris Sorensen" Then
+        ElseIf ActiveCell.Value = "Chris Sorensen" Then
             ActiveCell.Value = 10
+        ElseIf ActiveCell.Value = "Malia Matagi" Then
+            ActiveCell.Value = 11
+        ElseIf ActiveCell.Value = "Yu Zhang" Then
+            ActiveCell.Value = 12
+        ElseIf ActiveCell.Value = "Ryen Auten" Then
+            ActiveCell.Value = 13
+        ElseIf ActiveCell.Value = "Will Hall" Then
+            ActiveCell.Value = 14
+        ElseIf ActiveCell.Value = "Emery Chiles" Then
+            ActiveCell.Value = 15
+        ElseIf ActiveCell.Value = "Debi Evans" Then
+            ActiveCell.Value = 16
+        ElseIf ActiveCell.Value = "Natalia Fama" Then
+            ActiveCell.Value = 17
         Else
-            ActiveCell.Value = 3
+            ActiveCell.Value = 4
         End If
         ActiveCell.Offset(1, 0).Select
     Next
